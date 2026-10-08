@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eiscafé Sardegna | Niestetal-Sandershausen • Original italienisches Gelato seit 1973</title>
+  <meta name="description" content="Eiscafé Sardegna in Niestetal-Sandershausen. Gegründet 1973 von Raffaele Deligia, geführt von Lucia Deligia und Thorsten Böer. Fast 40 glutenfreie Eissorten, Eisbecher, Waffeln, Kaffeespezialitäten und mobiles Eisfahrrad.">
+  
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Color Accents -->
+  <div class="bg-ambient-blob blob-1"></div>
+  <div class="bg-ambient-blob blob-2"></div>
+  <div class="bg-ambient-blob blob-3"></div>
+  <div class="bg-ambient-blob blob-4"></div>
+
+  <!-- Top Info Bar -->
+  <aside class="top-infobar" aria-label="Schnellinformationen">
+    <div class="container">
+      <div class="infobar-left">
+        <span class="infobar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+          Hannoversche Straße 102, 34266 Niestetal-Sandershausen
+        </span>
+        <span class="infobar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Tel: 0561 49173928 • Mobil: 0173 / 51 22679
+        </span>
+      </div>
+      <div class="infobar-right">
+        <span class="status-indicator">
+          <span class="status-dot"></span>
+          <span id="liveStatusText">Täglich geöffnet: Mo-Fr ab 10:30, Sa-So ab 11:00</span>
+        </span>
+        <span class="infobar-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          100% Glutenfrei & ohne Farbstoffe
+        </span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="navbar" id="mainNavbar">
+    <div class="container">
+      <a href="#home" class="brand-logo" aria-label="Eiscafé Sardegna Startseite">
+        <div class="logo-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8.69 2 6 4.69 6 8c0 1.25.39 2.41 1.05 3.37L12 22l4.95-10.63C17.61 10.41 18 9.25 18 8c0-3.31-2.69-6-6-6zm0 2c2.21 0 4 1.79 4 4 0 .85-.27 1.63-.73 2.27L12 16.59l-3.27-6.32C8.27 9.63 8 8.85 8 8c0-2.21 1.79-4 4-4z"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="brand-title">Eiscafé Sardegna</span>
+          <span class="brand-subtitle">Qualität aus Tradition • Gegründet 1973</span>
+        </div>
+      </a>
+
+      <!-- Navigation Menu (Directly matching all sections & links) -->
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#wir-ueber-uns" class="nav-link">Wir über uns</a></li>
+          <li><a href="#unser-eis" class="nav-link">Unser Eis</a></li>
+          <li><a href="#auch-lecker" class="nav-link">Auch lecker</a></li>
+          <li><a href="#eisfahrrad" class="nav-link">Unser Eisfahrrad</a></li>
+          <li><a href="#oeffnungszeiten" class="nav-link">Öffnungszeiten</a></li>
+          <li><a href="#so-finden-sie-uns" class="nav-link">So finden Sie uns</a></li>
+          <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#eisfahrrad" class="btn btn-primary nav-btn" onclick="selectEventInquiry()">
+          <span>Eisfahrrad buchen</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Menü öffnen" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <div class="hero-content">
+            <div class="pill-badge">
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.2h7.6l-6.1 4.5 2.3 7.3-6.2-4.5-6.2 4.5 2.3-7.3-6.1-4.5h7.6z"/></svg>
+              Traditionelle italienische Handwerkskunst seit 1973
+            </div>
+
+            <h1 class="hero-title">
+              Unsere Eiszeit ist <br>
+              <span class="highlight">einfach himmlisch.</span><br>
+              Und lecker. Jeden Tag ...
+            </h1>
+
+            <p class="hero-desc">
+              Willkommen im Eiscafé Sardegna in Niestetal-Sandershausen! Nehmen Sie sich eine verdiente Auszeit vom Alltag: Löffeln Sie genüsslich unsere beliebten Eisbecher, probieren Sie fast 40 Eissorten im ständigen Wechsel oder buchen Sie unser nostalgisches Eisfahrrad ganzjährig für Ihre Feier.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#unser-eis" class="btn btn-primary">
+                <span>Eissorten entdecken</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="#eisfahrrad" class="btn btn-secondary">
+                <span>Unser Eisfahrrad</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+              </a>
+            </div>
+
+            <!-- Hero Stats Row (Authentic Details) -->
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number">1973</span>
+                <span class="stat-label">In Kassel gegründet</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">Fast 40</span>
+                <span class="stat-label">Sorten im Wechsel</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Glutenfrei & natürlich</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">Ab 25 P.</span>
+                <span class="stat-label">Eisfahrrad buchbar</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual Showcase -->
+          <div class="hero-visual">
+            <div class="hero-card-stack">
+              <div class="hero-image-wrap">
+                <img 
+                  src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?auto=format&fit=crop&w=1000&q=80" 
+                  alt="Hausgemachtes italienisches Eis im Eiscafé Sardegna"
+                  loading="eager"
+                >
+              </div>
+
+              <!-- Floating Badges -->
+              <div class="floating-badge badge-top-right">
+                <div class="badge-icon-box">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                </div>
+                <div>
+                  <div class="badge-text-title">Glutenfreie Rezeptur</div>
+                  <div class="badge-text-sub">Ohne Farbstoffe & Süßungsmittel</div>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-bottom-left">
+                <div class="badge-icon-box cyan">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+                <div>
+                  <div class="badge-text-title">Familientradition</div>
+                  <div class="badge-text-sub">Lucia Deligia & Thorsten Böer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Wir über uns (Section 28: Wir-ueber-uns.html) -->
+    <section class="about-section" id="wir-ueber-uns">
+      <div class="container">
+        <div class="about-grid">
+          
+          <div class="about-mosaic">
+            <div class="mosaic-main">
+              <img 
+                src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80" 
+                alt="Eisbecher im Eiscafé Sardegna"
+                loading="lazy"
+              >
+            </div>
+            <div class="mosaic-sub">
+              <img 
+                src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=80" 
+                alt="Italienischer Espresso im Eiscafé Sardegna"
+                loading="lazy"
+              >
+            </div>
+          </div>
+
+          <div class="about-content">
+            <div class="pill-badge">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-6h2zm0-8h-2V7h2z"/></svg>
+              Die nächste Generation
+            </div>
+
+            <h2 class="about-intro-title">Unser Versprechen auf hervorragende Qualität</h2>
+            <div class="italian-salutation">„Ciao, liebe Gäste, ciao, liebe Freunde!“</div>
+
+            <p>
+              So lange verwöhnt das Eiscafé Sardegna nun schon seine Gäste: Gegründet wurde der Eissalon im Jahr <strong>1973 von Raffaele Deligia</strong>. Damals war es eines der ersten italienischen Eiscafés in Kassel und Umgebung.
+            </p>
+            <p>
+              Acht Eissorten gab es damals gerade mal – heute sind es <strong>fast 40 Sorten im ständigen Wechsel</strong>! Aktuell wird das Eiscafé Sardegna von <strong>Lucia Deligia und Thorsten Böer</strong> geführt. Die Eisherstellung hat Lucia von der Pike auf gelernt – schon ihre Eltern stellten in ihrer Heimat Sardinien Eis her. Dies alles ist unser Versprechen an Sie: pure Qualität und echte italienische Leidenschaft.
+            </p>
+
+            <div class="about-features-list">
+              <div class="about-feat-item">
+                <div class="about-feat-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Sardische Wurzeln
+                </div>
+                <p class="about-feat-desc">Überlieferte Originalrezepturen direkt aus Sardinien mit viel Herzblut zubereitet.</p>
+              </div>
+
+              <div class="about-feat-item">
+                <div class="about-feat-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Beste Rohstoffe
+                </div>
+                <p class="about-feat-desc">Frische Milch, Pistazien, Bourbon-Vanille und sonnengereifte Früchte ohne künstliche Zusätze.</p>
+              </div>
+
+              <div class="about-feat-item">
+                <div class="about-feat-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  100% Glutenfrei
+                </div>
+                <p class="about-feat-desc">Unsere Eissorten sind samt und sonders glutenfrei und ohne Süßungsmittel hergestellt.</p>
+              </div>
+
+              <div class="about-feat-item">
+                <div class="about-feat-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Täglich geöffnet
+                </div>
+                <p class="about-feat-desc">Wir sind an jedem Tag der Woche für Sie da – werktags, sonntags und an Feiertagen.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Unser Eis (Section 13: Unser-Eis.html) -->
+    <section class="menu-section" id="unser-eis">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="pill-badge cyan">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Vielfalt im steten Wechsel
+          </div>
+          <h2 class="section-title">Unsere Eissorten & Spezialitäten</h2>
+          <p class="section-subtitle">
+            Bunte Abwechslung ist besser als dumpfe Eintönigkeit! Weil das so ist, wechseln wir unser Eisangebot immer mal wieder. Absolute Klassiker haben wir immer – dazu kommen ausgefallene Gaumenfreuden wie Basilikum, Aloe Vera, Schmand mit Sanddorn oder Zuckerwatte.
+          </p>
+        </div>
+
+        <!-- Flavor Cloud of Official Sardegna Sorten -->
+        <div class="flavor-cloud-box">
+          <div class="flavor-cloud-header">
+            <span class="flavor-cloud-title">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.69 2 6 4.69 6 8c0 1.25.39 2.41 1.05 3.37L12 22l4.95-10.63C17.61 10.41 18 9.25 18 8c0-3.31-2.69-6-6-6z"/></svg>
+              Fast 40 Sorten im ständigen Sortiment & Wechsel:
+            </span>
+            <span class="pill-badge" style="font-size: 0.78rem;">Samt und sonders glutenfrei</span>
+          </div>
+
+          <div class="flavor-pills-wrap">
+            <!-- Milcheis Pills -->
+            <span class="flavor-pill milch">🍦 Banane</span>
+            <span class="flavor-pill milch">🍦 Blau</span>
+            <span class="flavor-pill milch">🍦 Saltedcaramel</span>
+            <span class="flavor-pill milch">🍦 Cookies</span>
+            <span class="flavor-pill milch">🍦 Joghurt-Waldfrüchte</span>
+            <span class="flavor-pill milch">🍦 Malaga</span>
+            <span class="flavor-pill milch">🍦 Nuss</span>
+            <span class="flavor-pill milch">🍦 Amarena</span>
+            <span class="flavor-pill milch">🍦 Schmand mit Zimt</span>
+            <span class="flavor-pill milch">🍦 Schokolade</span>
+            <span class="flavor-pill milch">🍦 Stracciatella</span>
+            <span class="flavor-pill milch">🍦 Tiramisu</span>
+            <span class="flavor-pill milch">🍦 Vanille</span>
+            <span class="flavor-pill milch">🍦 Pistazie</span>
+            <span class="flavor-pill milch">🍦 Waldmeister</span>
+            <span class="flavor-pill milch">🍦 Basilikum</span>
+            <span class="flavor-pill milch">🍦 Dunkle Schokolade</span>
+            <span class="flavor-pill milch">🍦 Snickerlino</span>
+            <span class="flavor-pill milch">🍦 Raffaelo</span>
+            <span class="flavor-pill milch">🍦 Kokos</span>
+            <span class="flavor-pill milch">🍦 After Eight</span>
+            <span class="flavor-pill milch">🍦 Chocore (Oreo)</span>
+            <span class="flavor-pill milch">🍦 Ovetto (Kinderüberraschung)</span>
+            <span class="flavor-pill milch">🍦 Schmand mit Sanddorn</span>
+            <span class="flavor-pill milch">🍦 Mokka mit Caramel & Krokant</span>
+            <span class="flavor-pill milch">🍦 Zuckerwatte</span>
+
+            <!-- Fruchteis Pills -->
+            <span class="flavor-pill frucht">🍓 Erdbeer</span>
+            <span class="flavor-pill frucht">🍋 Zitrone</span>
+            <span class="flavor-pill frucht">🌿 Aloe Vera</span>
+            <span class="flavor-pill frucht">🍊 Blutorange</span>
+            <span class="flavor-pill frucht">🍇 Granatapfel</span>
+            <span class="flavor-pill frucht">🍉 Wassermelone</span>
+            <span class="flavor-pill frucht">🍈 Honigmelone</span>
+            <span class="flavor-pill frucht">🍏 Grüner Apfel</span>
+            <span class="flavor-pill frucht">🥭 Mango</span>
+            <span class="flavor-pill frucht">🌾 Sanddorn</span>
+            <span class="flavor-pill frucht">🫐 Himbeer</span>
+            <span class="flavor-pill frucht">🍊 Orange</span>
+          </div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="menu-tabs">
+          <button class="tab-btn active" data-category="all">Alle Spezialitäten</button>
+          <button class="tab-btn" data-category="eisbecher">🍨 Große Eisbecher</button>
+          <button class="tab-btn" data-category="junior">🐻 Für Junior & Co</button>
+          <button class="tab-btn" data-category="kugeln">🍦 Gelato & Sorbets</button>
+        </div>
+
+        <!-- Menu Grid Items with Exact Sardegna Descriptions -->
+        <div class="menu-grid" id="menuGrid">
+
+          <!-- Item 1: Spaghetti-Eis Sardegna Variationen -->
+          <article class="menu-card" data-category="eisbecher">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1580915411954-282cb1b0d780?auto=format&fit=crop&w=600&q=80" alt="Spaghetti-Eis Sardegna" loading="lazy">
+              <span class="card-tag">Großer Klassiker</span>
+            </div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="dish-name">Spaghetti-Eis mit Früchten</h3>
+                <span class="dish-price">7,80 €</span>
+              </div>
+              <div class="dish-italian">Unser großer Klassiker</div>
+              <p class="dish-desc">
+                Cremiges Vanilleeis auf frischer Schlagsahne, garniert mit fruchtiger Erdbeersoße und reichlich frischen Früchten der Saison sowie feinen weißen Schokoraspeln.
+              </p>
+              <div class="card-meta-footer">
+                <div class="diet-tags">
+                  <span class="diet-badge">Glutenfrei</span>
+                  <span class="diet-badge">Klassiker</span>
+                </div>
+                <span class="order-hint">Frisch zubereitet</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2: Bärchen-Eis für Kinder -->
+          <article class="menu-card" data-category="junior">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80" alt="Bärchen-Eis für Kinder" loading="lazy">
+              <span class="card-tag">Für Junior & Co</span>
+            </div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="dish-name">Bärchen-Eis</h3>
+                <span class="dish-price">4,90 €</span>
+              </div>
+              <div class="dish-italian">Das Beste für die Kleinen</div>
+              <p class="dish-desc">
+                Leckeres Vanilleeis in liebevoller Bärenform, garniert mit samtiger Sahne und bunt dekoriert mit süßen Knabbereien und Waffelohren.
+              </p>
+              <div class="card-meta-footer">
+                <div class="diet-tags">
+                  <span class="diet-badge">Kinderliebling</span>
+                  <span class="diet-badge">Bunte Deko</span>
+                </div>
+                <span class="order-hint">Kinderportion</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3: Joghurt Heidelbeer Becher -->
+          <article class="menu-card" data-category="eisbecher">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?auto=format&fit=crop&w=600&q=80" alt="Joghurt Heidelbeer Becher" loading="lazy">
+              <span class="card-tag">Frisch & Luftig</span>
+            </div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="dish-name">Joghurt Heidelbeer Becher</h3>
+                <span class="dish-price">8,20 €</span>
+              </div>
+              <div class="dish-italian">Leckeres aus Joghurt</div>
+              <p class="dish-desc">
+                Frisches Joghurteis, cremiger Naturjoghurt, saftige Heidelbeeren und fein abgestimmter Waldbeeren-Fruchtspiegel – leicht und herrlich erfrischend.
+              </p>
+              <div class="card-meta-footer">
+                <div class="diet-tags">
+                  <span class="diet-badge">Naturjoghurt</span>
+                  <span class="diet-badge">Fruchtig-frisch</span>
+                </div>
+                <span class="order-hint">Leichter Genuss</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4: Frischer Erdbeer-Becher -->
+          <article class="menu-card" data-category="eisbecher">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1580915411954-282cb1b0d780?auto=format&fit=crop&w=600&q=80" alt="Erdbeer-Becher" loading="lazy">
+              <span class="card-tag">Fruchtbecher</span>
+            </div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="dish-name">Erdbeer-Becher Sardegna</h3>
+                <span class="dish-price">8,40 €</span>
+              </div>
+              <div class="dish-italian">Fruchtig und auch mal sahnig</div>
+              <p class="dish-desc">
+                Echtes Bourbon-Vanilleeis, geschlagene Sahne, hausgemachte Erdbeersoße und eine Fülle erntefrischer Erdbeeren. Ein ewiger Favorit!
+              </p>
+              <div class="card-meta-footer">
+                <div class="diet-tags">
+                  <span class="diet-badge">Frische Früchte</span>
+                  <span class="diet-badge">Glutenfrei</span>
+                </div>
+                <span class="order-hint">Sommerhit</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 5: Schmand mit Zimt & Sanddorn -->
+          <article class="menu-card" data-category="kugeln">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=600&q=80" alt="Schmand mit Zimt" loading="lazy">
+              <span class="card-tag">Spezialität</span>
+            </div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="dish-name">Schmand mit Zimt</h3>
+                <span class="dish-price">1,80 €</span>
+              </div>
+              <div class="dish-italian">Hauskreation aus Sandershausen</div>
+              <p class="dish-desc">
+                Unglaublich samtiges Schmand-Eis, fein akzentuiert mit aromatischem Ceylon-Zimt. Auch in der fruchtigen Variante mit Sanddorn erhältlich!
+              </p>
+              <div class="card-meta-footer">
+                <div class="diet-tags">
+                  <span class="diet-badge">Hausgemacht</span>
+                  <span class="diet-badge">Besondere Sorte</span>
+                </div>
+                <span class="order-hint">Kugelpreis</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 6: Basilikum & Aloe Vera Sorbet -->
+          <article class="menu-card" data-category="kugeln">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&w=600&q=80" alt="Basilikum & Aloe Vera Sorbet" loading="lazy">
+              <span class="card-tag">Erlebnis</span>
+            </div>
+            <div class="card-body">
+              <div class="card-header-row">
+                <h3 class="dish-name">Basilikum & Aloe Vera</h3>
+                <span class="dish-price">1,80 €</span>
+              </div>
+              <div class="dish-italian">Eis essen zum Erlebnis machen</div>
+              <p class="dish-desc">
+                Ausgefallen, aber höchst lecker: Spritzig-frische Kräuter- und Fruchtsorbets, die an warmen Tagen den Gaumen beleben und verzaubern.
+              </p>
+              <div class="card-meta-footer">
+                <div class="diet-tags">
+                  <span class="diet-badge">Vegan</span>
+                  <span class="diet-badge">Laktosefrei</span>
+                </div>
+                <span class="order-hint">Kugelpreis</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Auch lecker (Section 24: Auch-lecker.html) -->
+    <section class="treats-section" id="auch-lecker">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="pill-badge">
+            <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+            Auch lecker
+          </div>
+          <h2 class="section-title">Gebackenes mit Pfiff & Kaffeegenuss</h2>
+          <p class="section-subtitle">
+            Wir haben selbstverständlich mehr zu bieten: Darf es eine leckere, frisch gebackene Waffel sein? Ein heißer Apfelstrudel? Oder ein frisch gebrühter Espresso aus besten Arabica-Bohnen?
+          </p>
+        </div>
+
+        <div class="treats-grid">
+          <!-- Treat Card 1: Apfelstrudel -->
+          <div class="treat-card">
+            <div class="treat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Heißer Apfelstrudel</h3>
+            <p>
+              Fein gewürzter, ofenfrischer Apfelstrudel serviert mit zartschmelzendem Vanilleeis, frischer Sahne und saftigen Früchten der Saison.
+            </p>
+            <ul class="treat-list">
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg> Ofenfrisch serviert</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg> Mit Bourbon-Vanilleeis & Sahne</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg> Garniert mit frischen Früchten</li>
+            </ul>
+          </div>
+
+          <!-- Treat Card 2: Frische Waffeln -->
+          <div class="treat-card">
+            <div class="treat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+            </div>
+            <h3>Frisch gebackene Waffeln</h3>
+            <p>
+              Goldbraune Herzwaffeln direkt aus dem Waffeleisen. Zum Beispiel heiß serviert mit Sahne, Bourbon-Vanilleeis und frischen Erdbeeren oder Kirschen.
+            </p>
+            <ul class="treat-list">
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg> Frisch auf Bestellung gebacken</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg> Wahlweise mit heißen Kirschen / Erdbeeren</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg> Mit Puderzucker & Sahnehaube</li>
+            </ul>
+          </div>
+
+          <!-- Treat Card 3: Kaffee & Heiße Spezialitäten -->
+          <div class="treat-card">
+            <div class="treat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+            </div>
+            <h3>Kaffee & Heißes</h3>
+            <p>
+              Klassischer Café Espresso aus feinsten Arabica-Bohnen. Den Espresso gibt es in vielen Variationen – für jeden Geschmack das Passende!
+            </p>
+            <ul class="treat-list">
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg> Espresso Corretto (mit einem Schuss Grappa)</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg> Espresso Macchiato mit geschäumter Milch</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg> Cappuccino Amaretto oder Cappuccino Zimt</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg> Milchkaffee, Latte Macchiato & Kakao</li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg> Heiße oder kalte Zitrone & erlesene Tees</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Unser Eisfahrrad (Section 25: Unser-Eisfahrrad.html) -->
+    <section class="bike-section" id="eisfahrrad">
+      <div class="container">
+        
+        <div class="bike-card-box">
+          <div class="bike-content">
+            <div class="pill-badge">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-6h2zm0-8h-2V7h2z"/></svg>
+              Unser Eis kommt per Fahrrad
+            </div>
+
+            <h2 class="bike-title">Wir haben die gute, alte Zeit wieder aufleben lassen!</h2>
+            
+            <p class="bike-desc">
+              Egal, ob eine große Party, eine Geburtstagsfeier, eine Betriebsfeier oder irgend ein anderer Anlass zum Zusammensein, egal, ob privat oder geschäftlich – <strong>unser Eisfahrrad sorgt bei Ihnen für Stimmung!</strong>
+            </p>
+
+            <div class="bike-features-grid">
+              <div class="bike-feature-item">
+                <div class="bike-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="bike-feature-text">
+                  <h4>Ganzjährig buchbar</h4>
+                  <p>Sie können uns zu jeder Jahreszeit für Ihr Event engagieren.</p>
+                </div>
+              </div>
+
+              <div class="bike-feature-item">
+                <div class="bike-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="bike-feature-text">
+                  <h4>Ab 25 Personen</h4>
+                  <p>Perfekt dimensioniert für private Feste und Firmenevents.</p>
+                </div>
+              </div>
+
+              <div class="bike-feature-item">
+                <div class="bike-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="bike-feature-text">
+                  <h4>Ihre Wunschsorten</h4>
+                  <p>Selbstverständlich gehen wir bei der Wahl der Eissorten auf Ihre Wünsche ein.</p>
+                </div>
+              </div>
+
+              <div class="bike-feature-item">
+                <div class="bike-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="bike-feature-text">
+                  <h4>Direkte Buchungshotline</h4>
+                  <p>Rufen Sie uns direkt an: <strong>0173 / 51 22679</strong></p>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="tel:01735122679" class="btn btn-primary">
+                <span>Jetzt anrufen: 0173 / 51 22679</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </a>
+              <a href="#kontakt" class="btn btn-secondary" onclick="selectEventInquiry()">
+                <span>Online anfragen</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="bike-image-side">
+            <img 
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" 
+              alt="Mobiles Eisfahrrad des Eiscafé Sardegna"
+              loading="lazy"
+            >
+            <div class="bike-floating-tag">
+              🚴 Ganzjährig buchbar ab 25 Personen
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Öffnungszeiten (Section 26: Oeffnungszeiten.html) -->
+    <section class="hours-section" id="oeffnungszeiten">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="pill-badge">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Kommen Sie rein ...
+          </div>
+          <h2 class="section-title">Unsere Öffnungszeiten</h2>
+          <p class="section-subtitle">
+            Wir haben wieder für Sie geöffnet. An jedem Tag der Woche freuen wir uns auf Ihren Besuch im Eiscafé Sardegna!
+          </p>
+        </div>
+
+        <div class="hours-grid">
+          
+          <!-- Opening Hours Table Card (Exact match to 26/Oeffnungszeiten.html) -->
+          <div class="hours-card">
+            <div class="card-top-header">
+              <div class="card-header-left">
+                <div class="card-header-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <h3 class="card-header-title">Wochenplan</h3>
+              </div>
+              <span class="pill-badge" style="padding: 0.2rem 0.8rem; font-size: 0.78rem;">Täglich geöffnet</span>
+            </div>
+
+            <table class="hours-table">
+              <tbody>
+                <tr>
+                  <td class="day-col">Montag</td>
+                  <td class="time-col">10:30 Uhr bis 19:00 Uhr</td>
+                </tr>
+                <tr>
+                  <td class="day-col">Dienstag</td>
+                  <td class="time-col">10:30 Uhr bis 19:00 Uhr</td>
+                </tr>
+                <tr>
+                  <td class="day-col">Mittwoch</td>
+                  <td class="time-col">10:30 Uhr bis 19:00 Uhr</td>
+                </tr>
+                <tr>
+                  <td class="day-col">Donnerstag</td>
+                  <td class="time-col">10:30 Uhr bis 19:00 Uhr</td>
+                </tr>
+                <tr>
+                  <td class="day-col">Freitag</td>
+                  <td class="time-col">10:30 Uhr bis 19:00 Uhr</td>
+                </tr>
+                <tr>
+                  <td class="day-col">Samstag</td>
+                  <td class="time-col">11:00 Uhr bis 19:00 Uhr</td>
+                </tr>
+                <tr>
+                  <td class="day-col">Sonntag & Feiertage</td>
+                  <td class="time-col">11:00 Uhr bis 19:00 Uhr</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="hours-notice-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              <span>Bei schönem Sommerwetter verlängern wir unsere Öffnungszeiten spontan am Abend für Sie!</span>
+            </div>
+          </div>
+
+          <!-- Quick Directions & Highlights Teaser -->
+          <div class="location-card">
+            <div class="card-top-header">
+              <div class="card-header-left">
+                <div class="card-header-icon cyan">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <h3 class="card-header-title">Ihr Weg zu uns</h3>
+              </div>
+              <span class="pill-badge cyan" style="padding: 0.2rem 0.8rem; font-size: 0.78rem;">Sandershausen</span>
+            </div>
+
+            <div class="location-details-list">
+              <div class="loc-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div class="loc-text">
+                  <strong>Navi-Adresse:</strong>
+                  <span>Hannoversche Straße 102, 34266 Niestetal</span>
+                </div>
+              </div>
+
+              <div class="loc-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <div class="loc-text">
+                  <strong>Telefon:</strong>
+                  <span>0561 49173928 • Inhaber Thorsten Böer: 0561 / 523521</span>
+                </div>
+              </div>
+
+              <div class="loc-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <div class="loc-text">
+                  <strong>E-Mail:</strong>
+                  <span>luciathosten@hotmail.de</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stylized Map Button -->
+            <div class="map-placeholder-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+              <span>Mitten in Sandershausen • Direkt an der Hannoverschen Straße</span>
+              <a href="https://maps.google.com/?q=Eiscafe+Sardegna+Hannoversche+Str+102+Niestetal" target="_blank" rel="noopener noreferrer" class="btn btn-outline-mint" style="padding: 0.4rem 1.1rem; font-size: 0.8rem; margin-top: 0.3rem;">
+                Route in Google Maps berechnen
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- So finden Sie uns (Section 27: So-finden-Sie-uns.html) -->
+    <section class="about-section" id="so-finden-sie-uns" style="background: var(--bg-page);">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="pill-badge">
+            <svg viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+            So finden Sie uns
+          </div>
+          <h2 class="section-title">Es sind kurze Wege zu uns ...</h2>
+          <p class="section-subtitle">
+            Wir sind mitten in Sandershausen zu finden, extrem gut zu erreichen.
+          </p>
+        </div>
+
+        <div class="hours-grid">
+          
+          <!-- Das bieten wir Card -->
+          <div class="hours-card">
+            <div class="card-top-header">
+              <div class="card-header-left">
+                <div class="card-header-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1 .4-1 1v7c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+                </div>
+                <h3 class="card-header-title">Das bieten wir vor Ort:</h3>
+              </div>
+            </div>
+
+            <div class="location-details-list">
+              <div class="loc-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <div class="loc-text">
+                  <strong>Vier Parkplätze direkt vor dem Eiscafé</strong>
+                  <span>Weitere Parkplätze in unmittelbarer Nähe vorhanden.</span>
+                </div>
+              </div>
+
+              <div class="loc-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 17v2M17 17v2M7 5h10M7 9h10"/></svg>
+                <div class="loc-text">
+                  <strong>Bushaltestelle der Linie 30</strong>
+                  <span>Bequem mit den öffentlichen Verkehrsmitteln erreichbar – Haltestelle genau gegenüber.</span>
+                </div>
+              </div>
+
+              <div class="loc-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></svg>
+                <div class="loc-text">
+                  <strong>Fahrrad-Abstellmöglichkeiten</strong>
+                  <span>Sichere Stellplätze für Fahrräder direkt vor unserem Eiscafé.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- So schnell sind Sie bei uns Card -->
+          <div class="location-card">
+            <div class="card-top-header">
+              <div class="card-header-left">
+                <div class="card-header-icon cyan">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <h3 class="card-header-title">So schnell sind Sie bei uns:</h3>
+              </div>
+            </div>
+
+            <div class="travel-times-grid">
+              <div class="travel-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1 .4-1 1v7c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+                3 Automin. Autobahn Kassel-Nord
+              </div>
+
+              <div class="travel-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1 .4-1 1v7c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+                10 Automin. Kassel-Innenstadt
+              </div>
+
+              <div class="travel-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1 .4-1 1v7c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+                10 Automin. Staufenberg-Landwehrhagen
+              </div>
+
+              <div class="travel-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1 .4-1 1v7c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+                12 Automin. Kaufungen
+              </div>
+
+              <div class="travel-pill" style="grid-column: span 2;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></svg>
+                15 Fahrradminuten von Kassel-Innenstadt
+              </div>
+            </div>
+
+            <div class="hours-notice-box" style="margin-top: 1rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="12 8 8 12 12 16 16 12 12 8"/></svg>
+              <span><strong>Die Navi-Adresse:</strong> 34266 Niestetal | Hannoversche Straße 102</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Kontakt (Section 14: Kontakt.html) -->
+    <section class="contact-section" id="kontakt">
+      <div class="container">
+        
+        <div class="contact-box-grid">
+          
+          <div class="contact-info-col">
+            <div class="pill-badge">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Kontakt
+            </div>
+
+            <h2 class="contact-info-title">Vielen Dank für Ihren Besuch!</h2>
+            
+            <p class="contact-info-desc">
+              Wenn Sie Fragen zu unseren Produkten oder unserem Eiscafé haben oder unser Eisfahrrad buchen möchten, so können Sie per E-Mail, Telefon oder auf dem Postweg Kontakt zu uns aufnehmen.
+            </p>
+
+            <div class="contact-quick-cards">
+              <a href="tel:056149173928" class="quick-card">
+                <div class="quick-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div class="quick-card-text">
+                  <span>Telefon</span>
+                  <strong>0561 49173928</strong>
+                </div>
+              </a>
+
+              <a href="tel:01735122679" class="quick-card">
+                <div class="quick-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                </div>
+                <div class="quick-card-text">
+                  <span>Mobil & Eisfahrrad</span>
+                  <strong>0173 / 51 22679</strong>
+                </div>
+              </a>
+
+              <a href="mailto:luciathosten@hotmail.de" class="quick-card">
+                <div class="quick-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="quick-card-text">
+                  <span>E-Mail</span>
+                  <strong>luciathosten@hotmail.de</strong>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact / Catering Inquiry Form -->
+          <div>
+            <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="userName">Ihr vollständiger Name *</label>
+                  <input type="text" id="userName" class="form-control" placeholder="z. B. Thomas Müller" required>
+                </div>
+                <div class="form-group">
+                  <label for="userEmail">Ihre E-Mail-Adresse *</label>
+                  <input type="email" id="userEmail" class="form-control" placeholder="thomas@beispiel.de" required>
+                </div>
+              </div>
+
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="userPhone">Telefonnummer (für Rückfragen)</label>
+                  <input type="tel" id="userPhone" class="form-control" placeholder="0173 1234567">
+                </div>
+                <div class="form-group">
+                  <label for="inquiryType">Ihr Anliegen *</label>
+                  <select id="inquiryType" class="form-control" required>
+                    <option value="eisfahrrad">Unser Eisfahrrad anfragen (ab 25 Personen)</option>
+                    <option value="allgemein">Allgemeine Frage zu Sorten & Café</option>
+                    <option value="reservierung">Größere Gruppe / Feier</option>
+                    <option value="feedback">Lob & Feedback</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="userMessage">Ihre Nachricht / Wunschdatum & Gästezahl *</label>
+                <textarea id="userMessage" class="form-control" placeholder="Teilen Sie uns Ihr Anliegen, Event-Datum oder Ihre Wunschsorten mit..." required></textarea>
+              </div>
+
+              <div class="form-submit-alert" id="formSuccessAlert">
+                ✨ Vielen Dank für Ihre Nachricht! Wir setzen uns schnellstmöglich mit Ihnen in Verbindung.
+              </div>
+
+              <div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                  <span>Nachricht jetzt absenden</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="logo-icon-wrap" style="width: 40px; height: 40px;">
+              <svg viewBox="0 0 24 24" fill="currentColor" style="width: 22px; height: 22px;">
+                <path d="M12 2C8.69 2 6 4.69 6 8c0 1.25.39 2.41 1.05 3.37L12 22l4.95-10.63C17.61 10.41 18 9.25 18 8c0-3.31-2.69-6-6-6z"/>
+              </svg>
+            </div>
+            <div class="logo-text">
+              <span class="brand-title" style="font-size: 1.25rem;">Eiscafé Sardegna</span>
+              <span class="brand-subtitle">Qualität aus Tradition • Seit 1973</span>
+            </div>
+          </div>
+          <p>
+            Traditionelle handwerkliche Eismacherkunst aus Sardinien. Inhaber: Thorsten Böer & Lucia Deligia.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#wir-ueber-uns">Wir über uns</a></li>
+            <li><a href="#unser-eis">Unser Eis</a></li>
+            <li><a href="#auch-lecker">Auch lecker</a></li>
+            <li><a href="#eisfahrrad">Unser Eisfahrrad</a></li>
+            <li><a href="#oeffnungszeiten">Öffnungszeiten</a></li>
+            <li><a href="#so-finden-sie-uns">So finden Sie uns</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Rechtliches</h4>
+          <ul class="footer-nav-list">
+            <li><button data-modal-target="impressumModal">Impressum (§ 5 TMG)</button></li>
+            <li><button data-modal-target="datenschutzModal">Datenschutzerklärung</button></li>
+            <li><a href="#unser-eis">Glutenfrei-Hinweis</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Öffnungszeiten kompakt</h4>
+          <div class="footer-hours-summary">
+            <div><strong>Mo – Fr:</strong> 10:30 – 19:00 Uhr</div>
+            <div><strong>Sa – So:</strong> 11:00 – 19:00 Uhr</div>
+            <div style="margin-top: 0.5rem; color: var(--mint-700); font-weight: 600;">An jedem Tag der Woche geöffnet!</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Eiscafé Sardegna • Hannoversche Straße 102, 34266 Niestetal-Sandershausen.
+        </div>
+        <div class="footer-quote">
+          „Eiscafé Sardegna. Wir machen es so, dass es Ihnen schmeckt.“
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal 1: Impressum (Exact match to 15/Impressum.html) -->
+  <div class="modal-overlay" id="impressumModal" role="dialog" aria-modal="true" aria-labelledby="impTitle">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h2 class="modal-title" id="impTitle">Impressum</h2>
+        <button class="modal-close-btn" data-modal-close aria-label="Schließen">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h3>Angaben gemäß § 5 TMG:</h3>
+        <p>
+          <strong>Eiscafé Sardegna</strong><br>
+          Inhaber: Thorsten Böer<br>
+          Hannoversche Straße 102<br>
+          34266 Niestetal-Sandershausen
+        </p>
+        <p>
+          <strong>Kontakt:</strong><br>
+          Telefon: 0561 / 523521<br>
+          Telefon Café: 0561 49173928<br>
+          Mobil: 0173 / 51 22679<br>
+          E-Mail: luciathosten@hotmail.de
+        </p>
+        <p>
+          <strong>Handelsregister:</strong><br>
+          Handwerkskammer Kassel HRB 52419
+        </p>
+        <p>
+          <strong>Inhaltlich Verantwortlicher:</strong><br>
+          Thorsten Böer, Hannoversche Straße 102, 34266 Niestetal-Sandershausen
+        </p>
+
+        <h3>Haftungsausschluss</h3>
+        <p><strong>Haftung für Inhalte:</strong> Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+        <p><strong>Haftung für Links:</strong> Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+        <p><strong>Urheberrecht:</strong> Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Datenschutzerklärung (Exact match to 29/Datenschutz.html) -->
+  <div class="modal-overlay" id="datenschutzModal" role="dialog" aria-modal="true" aria-labelledby="datTitle">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h2 class="modal-title" id="datTitle">Datenschutzerklärung</h2>
+        <button class="modal-close-btn" data-modal-close aria-label="Schließen">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h3>Datenschutz</h3>
+        <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
+        <p>Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies stets auf freiwilliger Basis.</p>
+
+        <h3>Kontaktformular</h3>
+        <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+
+        <h3>Auskunft, Löschung, Sperrung</h3>
+        <p>Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden.</p>
+
+        <h3>Server-Log-Files & Cookies</h3>
+        <p>Der Provider der Seiten erhebt und speichert automatisch Informationen in Server-Log Files (Browsertyp, Betriebssystem, Referrer URL, Hostname, Uhrzeit der Serveranfrage). Diese Daten sind nicht bestimmten Personen zuordenbar. Cookies richten auf Ihrem Rechner keinen Schaden an und dienen der Benutzerfreundlichkeit.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vanilla JavaScript for Interactive Enhancements -->
+  <script src="script.js"></script>
+</body>
+</html>
